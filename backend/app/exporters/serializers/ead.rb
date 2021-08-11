@@ -99,13 +99,8 @@ class EADSerializer < ASpaceExport::Serializer
 
   # If content looks like it contains a valid XML element with an attribute from the expected list,
   # then replace the attribute like " foo=" with " xlink:foo=".
-
-  # References used for valid element and attribute names:
-  # https://www.xml.com/pub/a/2001/07/25/namingparts.html
-  # https://razzed.com/2009/01/30/valid-characters-in-attribute-names-in-htmlxml/
-
   def add_xlink_prefix(content)
-    %w{ actuate arcrole entityref from href id linktype parent role show target title to xpointer }.each do |xa|
+    %w{ actuate arcrole from href role show title to}.each do |xa|
       content.gsub!(/ #{xa}=/) {|match| " xlink:#{match.strip}"} if content =~ / #{xa}=/
     end
     content
@@ -295,7 +290,7 @@ class EADSerializer < ASpaceExport::Serializer
           if AppConfig[:arks_enabled]
             ark_url = ArkName::get_ark_url(data.id, :archival_object)
             if ark_url
-              # <unitid><extref xlink:href="ARK" xlink:actuate="onLoad" xlink:show="new" xlink:linktype="simple">ARK</extref></unitid>
+              # <unitid><extref xlink:href="ARK" xlink:actuate="onLoad" xlink:show="new" xlink:type="simple">ARK</extref></unitid>
               xml.unitid {
                               xml.extref ({"xlink:href" => ark_url,
                                           "xlink:actuate" => "onLoad",
