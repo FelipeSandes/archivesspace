@@ -1,0 +1,16 @@
+pt-br:
+  plugins:
+    hello_world:
+      label: Olá Mundo
+      _singular: Olá Mundo
+      _plural: Olá Mundos
+      title: Olá Mundos!
+      who: Quem ?
+      who_tooltip: |
+          <p> CAMPO REQUERIDO: o nome da pessoa que diz olá para o mundo. </p>
+      say_hello: Diga olá
+      who_said_hello: Essas pessoas já disseram olá
+      nobody: ... Bem, ninguém disse olá ainda. Por que não ser o primeiro?!
+      _frontend:
+        action:
+          add: Adicionar Olá Mundo

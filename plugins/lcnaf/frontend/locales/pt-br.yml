@@ -1,0 +1,26 @@
+pt-br:
+  plugins:
+    lcnaf:
+      label: LCNAF Import
+      authority: Fonte de Autoridade
+      search:
+        family_name: Nome Principal
+        given_name: Segundo Nome
+      actions:
+        search: Pesquisar
+        import: Importar
+        select: Selecionar
+        show_record: Mostrar Registro
+      messages:
+        none_selected: Nenhum resultado selecionado
+        no_results: Nenhum resultado para a consulta
+        selected: Selecionado
+        import_success: Importar trabalho criado
+        import_success_message: Redirecionando para a página de status do trabalho ...
+        import_error: Erro ao importar do LCNAF
+        search_error: Erro de pesquisa
+        search_error_message: Um problema foi encontrado ao completar esta pesquisa. Certifique-se de que o serviço de terceiros ainda esteja disponível.
+        service_locked: Itens já selecionados
+        service_locked_message: Por favor, importe ou remova seus itens selecionados antes de trocar o serviço de registro.
+        service_warning: Este plugin depende de serviços de terceiros que podem ou não estar disponíveis ou ser suportados.
+      result_summary: "Página% {page} - Mostrando resultados% {first_record_index} a% {last_record_index} de% {hit_count} correspondências"

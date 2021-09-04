@@ -1,0 +1,6 @@
+pt-br:
+  plugins:
+    cat_in_a_box:
+      title: Gato em uma caixa!
+      label: Gato em uma caixa
+      source: "O URI de origem do seu gato da <a href='http://thecatapi.com/'> API Cat </a> é:"

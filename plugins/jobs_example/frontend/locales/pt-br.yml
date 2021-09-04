@@ -1,0 +1,9 @@
+pt-br:
+  slow_nothing_job:
+    _singular: Trabalho sem lentidão
+    _plural: Os trabalhos não estão lento
+    multiple: Fazer mais de uma vez?
+    times: Quantas vezes?
+  job:
+    types:
+      slow_nothing_job: Trabalho não está lento
